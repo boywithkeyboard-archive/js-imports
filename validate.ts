@@ -1,5 +1,4 @@
-import { importsRegex } from './imports_regex.ts'
-import { exportsRegex } from './mod.ts'
+import { exportsRegex, importsRegex } from './mod.ts'
 
 export function isValidImport(input: string) {
   return importsRegex.test(input + '\n')
