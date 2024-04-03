@@ -13,8 +13,37 @@ import {
   importsRegex,
   isValidExport,
   isValidImport,
+  rewriteIdentfiers,
   tripleSlashCommentRegex,
+  walkImports,
 } from 'https://deno.re/boywithkeyboard/js-imports@v0.1.0'
+```
+
+### `rewriteIdentifiers()`
+
+```ts
+let fileContent = Deno.readTextFileSync('./foo.js')
+
+fileContent = rewriteImports(fileContent, (identifier, type) => {
+  return identifier.replace(...)
+})
+```
+
+### `walkImports()`
+
+```ts
+const fileContent = Deno.readTextFileSync('./foo.js')
+
+for (const i of walkImports(fileContent)) {
+  console.log(i)
+  // e.g.
+  // {
+  //   input: 'import "foo"\n',
+  //   identifier: 'foo',
+  //   regexpArray: [],
+  //   type: 'import'
+  // }
+}
 ```
 
 ### `isValidImport()`
