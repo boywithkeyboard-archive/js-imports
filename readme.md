@@ -12,7 +12,7 @@ import {
   exportsRegex,
   importsRegex,
   tripleSlashCommentRegex,
-} from 'https://deno.re/boywithkeyboard/js-imports@v0.1.0/mod.ts'
+} from 'https://deno.re/boywithkeyboard/js-imports@v0.1.0'
 ```
 
 ### `isValidImport()`
