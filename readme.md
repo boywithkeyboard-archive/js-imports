@@ -11,6 +11,8 @@ import {
   denoTypesCommentRegex,
   exportsRegex,
   importsRegex,
+  isValidExport,
+  isValidImport,
   tripleSlashCommentRegex,
 } from 'https://deno.re/boywithkeyboard/js-imports@v0.1.0'
 ```
